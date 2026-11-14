@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +11,7 @@ class Tes extends StatelessWidget {
   List<int> harga = [10000, 15000];
   List<String> porsi = ["1 Porsi", "1 Porsi"];
 
-  List<String> gambar = [
-    "assets/soto.jpg",
-    "assets/rawon.jpg",
-  ];
+  List<String> gambar = ["assets/soto.jpg", "assets/rawon.jpg"];
 
   @override
   Widget build(BuildContext context) {
@@ -23,17 +19,14 @@ class Tes extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
-
         appBar: AppBar(
           title: Text("Menu Makanan"),
-          backgroundColor: Color(0xffffee6e),
-          foregroundColor: Colors.black,
+          backgroundColor: Color(0xfffeff6e),
+          foregroundColor: Color(0xff1b1919),
         ),
-
         body: SingleChildScrollView(
           child: Table(
             border: TableBorder.all(width: 2),
-
             columnWidths: {
               0: FlexColumnWidth(0.6),
               1: FlexColumnWidth(1.5),
@@ -41,11 +34,10 @@ class Tes extends StatelessWidget {
               3: FlexColumnWidth(1.2),
               4: FlexColumnWidth(1.1),
             },
-
             children: [
               TableRow(
                 decoration: BoxDecoration(
-                  color: Colors.deepPurple.shade100,
+                  color: Color(0xfffeff6e),
                 ),
                 children: [
                   Text("No"),
@@ -55,19 +47,16 @@ class Tes extends StatelessWidget {
                   Text("Porsi"),
                 ],
               ),
-
               for (int i = 0; i < menu.length; i++)
                 TableRow(
                   children: [
                     Text("${i + 1}"),
-
                     Image.asset(
                       gambar[i],
                       width: 80,
                       height: 80,
                       fit: BoxFit.cover,
                     ),
-
                     Text(menu[i]),
                     Text("Rp ${harga[i]}"),
                     Text(porsi[i]),
