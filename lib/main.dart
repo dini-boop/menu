@@ -22,8 +22,7 @@ class Tes extends StatelessWidget {
         appBar: AppBar(
           title: Text("Menu Makanan"),
           backgroundColor: Color(0xfffeff6e),
-          foregroundColor: Colors.white,
-        ),
+foregroundColor: Colors.black,
         body: SingleChildScrollView(
           child: Table(
             border: TableBorder.all(width: 2),
